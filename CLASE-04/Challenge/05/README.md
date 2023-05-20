@@ -1,71 +1,81 @@
-Implementación de Flask y el Consumidor con Docker Compose
+ Documentación: Implementación de la  contenerización de una aplicación Flask y Consumer
 
-1. Crear la aplicación Flask:
 
-Crea un nuevo directorio para tu aplicación Flask.
-Dentro del directorio, crea un archivo llamado app.py e implementa tu código de aplicación Flask.
-Asegúrate de que el objeto de aplicación Flask se llame app.
-2. Crear el consumidor:
+Implementación de Flask y el Consumer con Docker Compose
+==========================================================
 
-Crea un directorio para tu código de consumidor.
-Dentro del directorio del consumidor, crea un archivo llamado consumer.py e implementa tu código de consumidor.
-3. Crear el archivo Dockerfile:
 
-# Use una imagen base de Python
-FROM python:3.8
+1\. Crear el archivo Dockerfile:
+--------------------------------
 
-# Establece el directorio de trabajo
-WORKDIR /app
-
-# Copia el archivo de requisitos
-COPY requirements.txt .
-
-# Instala las dependencias
-RUN pip install -r requirements.txt
-
-# Copia el código de la aplicación Flask y del consumidor
-COPY app.py .
-COPY consumer consumer
-
-# Establece las variables de entorno
-ENV FLASK_APP=app.py
-ENV FLASK_ENV=development
-ENV LOCAL=true
-ENV PYTHONUNBUFFERED=1
-
-# Expone el puerto
-EXPOSE 8000
-
-# Ejecuta la aplicación Flask
-CMD flask run --host=0.0.0.0 --port=8000
+    # Imagen base
+    FROM python:3.8
     
-4. Crear el archivo requirements.txt:
-
-Flask==2.0.1
+    # Establecer el directorio de trabajo dentro del contenedor
+    WORKDIR /app
     
-5. Crear el archivo docker-compose.yml:
-
-version: "3.8"
-services:
-  flask-app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - "8000:8000"
-    container_name: lab05
-
-  consumer:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    command: python consumer/consumer.py
+    # Copiar los archivos de dependencias e instalarlas
+    COPY requirements.txt .
+    RUN pip install --no-cache-dir -r requirements.txt
     
-6. Iniciar los servicios:
-
-Abre una terminal y navega hasta el directorio raíz de tu proyecto.
-Ejecuta el siguiente comando para iniciar los servicios:
-docker-compose up
+    # Copiar los archivos de la aplicación y el consumidor al contenedor
+    COPY app app
+    COPY consumer consumer
     
-Con estos pasos, puedes contenerizar tu aplicación Flask y el consumidor usando Docker Compose, lo que te permitirá ejecutar y gestionar ambos 
-servicios fácilmente.
+    # Establecer las variables de entorno
+    ENV LOCAL=true
+    ENV PYTHONUNBUFFERED="1"
+    ENV FLASK_APP=app.main
+    
+    # Exponer el puerto en el que se ejecuta la aplicación Flask
+    EXPOSE 8000
+    
+    # Comando para ejecutar la aplicación Flask
+    CMD ["flask", "run", "--host=0.0.0.0"]
+        
+
+4\. Crear el archivo requirements.txt:
+--------------------------------------
+
+    Flask
+    requests    
+
+5\. Crear el archivo docker-compose.yml:
+----------------------------------------
+
+    version: "3.8"
+    version: "3.8"
+    services:
+      service-flask-app:
+        build:
+          context: .
+          dockerfile: Dockerfile
+        ports:
+          - "8000:8000"
+        environment:
+          - FLASK_APP=app/app.py
+          - FLASK_ENV=development
+        command: flask run --host=0.0.0.0 --port=8000
+        container_name: lab05-flask
+    
+      consumer:
+        build:
+          context: .
+          dockerfile: Dockerfile
+        environment:
+          - LOCAL=true
+          - PYTHONUNBUFFERED=1
+        command: python consumer/consumer.py
+        container_name: lab05-consumer
+        
+
+6\. Iniciar los servicios:
+--------------------------
+
+*   Abrir una terminal y navegar hasta el directorio raíz "/src" del proyecto.
+*   Ejecuta el siguiente comando para iniciar los servicios:
+
+    docker-compose up
+        
+
+Con estos pasos, se contenerizara la aplicación Flask y el Consumer usando Docker Compose.
