@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  service-flask-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - FLASK_APP=app/app.py
+      - FLASK_ENV=development
+    command: flask run --host=0.0.0.0 --port=8000
+    container_name: lab05-flask
+
+  consumer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - LOCAL=true
+      - PYTHONUNBUFFERED=1
+    command: python consumer/consumer.py
+    container_name: lab05-consumer
