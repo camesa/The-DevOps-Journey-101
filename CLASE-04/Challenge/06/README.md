@@ -1,7 +1,7 @@
- Documentación: Implementación de la  contenerización de una aplicación Flask y Consumer
+ Documentación: Implementación de la  contenerización de aplicacion PokeAPI con Flask
 
 
-Implementación de Flask y el Consumer con Docker Compose
+Implementación de PokeAPI con Flask
 ==========================================================
 
 
