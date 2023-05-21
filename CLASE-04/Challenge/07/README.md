@@ -91,12 +91,5 @@ Implementación de "Pokemon DevOps" con Docker Compose
 
     docker-compose up
 
-6\. Iniciar los servicios:
---------------------------------------
-*   Abrir una terminal y navegar hasta el directorio raíz del proyecto.
-*   Ejecutar el siguiente comando para iniciar los servicios:
-
-    
-    docker run -p 5000:5000 --name 'pokeapi' camesa/pokeapi:1.0
 
 Con estos pasos, se contenerizara la aplicacion de Pokemon DevOps
