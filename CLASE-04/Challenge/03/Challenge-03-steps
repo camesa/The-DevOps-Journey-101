@@ -1,9 +1,13 @@
 ~/Documents/DevOps/C4/The-DevOps-Journey-101/CLASE-04/Challenge/03 on master
 $ git checkout Challenges
 Switched to branch 'Challenges'
+
+
 ~/Documents/DevOps/C4/The-DevOps-Journey-101/CLASE-04/Challenge/03 on Challenges
 $ ls
 lab-03.md web
+
+
 ~/Documents/DevOps/C4/The-DevOps-Journey-101/CLASE-04/Challenge/03 on Challenges
 $ docker search nginx
 NAME                                              DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
@@ -31,7 +35,9 @@ rancher/nginx-conf                                                              
 rancher/nginx-ssl                                                                                 0                    
 bitnamicharts/nginx                                                                               0                    
 rapidfort/nginx-ib                                RapidFort optimized, hardened image for NGIN…   0                    
-continuumio/nginx-ingress-ws                                                                      0                    
+continuumio/nginx-ingress-ws                                                                      0     
+
+
 ~/Documents/DevOps/C4/The-DevOps-Journey-101/CLASE-04/Challenge/03 on Challenges
 $ docker pull nginx
 Using default tag: latest
@@ -45,6 +51,8 @@ cb9192afe1d0: Pull complete
 Digest: sha256:480868e8c8c797794257e2abd88d0f9a8809b2fe956cbfbc05dcc0bca1f7cd43
 Status: Downloaded newer image for nginx:latest
 docker.io/library/nginx:latest
+
+
 ~/Documents/DevOps/C4/The-DevOps-Journey-101/CLASE-04/Challenge/03 on Challenges
 $ docker run -p 9999:80 --name bootcamp_web nginx
 /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
@@ -70,10 +78,13 @@ $ docker run -p 9999:80 --name bootcamp_web nginx
 
 ~/Documents/DevOps/C4/The-DevOps-Journey-101/CLASE-04/Challenge/03 on Challenges
 $ cd web/
+
 ~/Documents/DevOps/C4/The-DevOps-Journey-101/CLASE-04/Challenge/03/web on Challenges
 $ docker cp . bootcamp_web:/usr/share/nginx/html
+
 ~/Documents/DevOps/C4/The-DevOps-Journey-101/CLASE-04/Challenge/03/web on Challenges
 $ docker exec -it bootcamp_web bash
+
 root@30408e4d34dc:/# ls /usr/share/nginx/html/
 50x.html  assets  css  index.html  js  
 root@30408e4d34dc:/# 
