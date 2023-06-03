@@ -1,3 +1,5 @@
-Challenge-onfire-*/
 node_modules/
-Dockerfile
+DS_STORE
+.DS_STORE
+
+.vagrant

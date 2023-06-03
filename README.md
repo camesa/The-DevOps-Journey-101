@@ -80,23 +80,31 @@ En la III Edición, tu despliegue dejará de ser manual, repetitivo y propenso a
         * [Challenge-14](./CLASE-04/Challenge/14/lab-14.md)   
         * [Challenge-15](./CLASE-04/Challenge/15/lab-15.md)             
   1. Kubernetes
-        * [Kubernetes]()
-        * [Pod]()
-        * [Replicaset]()
-        * [Deployment]()
-        * [Services]()      
-        * [Challenge-01]() 
-        * [Challenge-02]()
-        * [Challenge-03]()              
+        * [Sobre Kubernetes](./CLASE-05/readme.md)
+        * [Kubernetes](./CLASE-05/kubernetes/01/introk8s.md)
+        * [Pod](./CLASE-05/kubernetes/02/pod.md)
+        * [Replicaset](./CLASE-05/kubernetes/03/rs.md)
+        * [Deployment](./CLASE-05/kubernetes/04/gestionando_deploy.md)
+        * [Service](./CLASE-05/kubernetes/06/svc.md)
+        * [Ingress](./CLASE-05/kubernetes/06/ingress.md)
+        * [Namespaces](./CLASE-05/kubernetes/05/ns.md) 
+        * [Minikube-Vagrant-K8s](./CLASE-05/minikube-k8s-vagrant/uso-vagrant-minikube.md) 
+        * [Recursos](./CLASE-05/recursos/)    
+        * [Challenge-01](./CLASE-05/challenge/01/lab01.md) 
+        * [Challenge-02](./CLASE-05/challenge/02/lab02.md)
+        * [Challenge-03](./CLASE-05/challenge/03/lab03.md)
+        * [Challenge-04](./CLASE-05/challenge/04/lab04.md)
+        * [Challenge-05](./CLASE-05/challenge/05/lab05.md)
+        * [Challenge-06](./CLASE-05/challenge/06/lab06.md)
+        * [Challenge-07](./CLASE-05/challenge/07/lab07.md)
+        * [Challenge-08](./CLASE-05/challenge/08/lab08.md)           
 
   1. AWS
-        * [Intro AWS]()
-        * [AWS S3]()
-        * [AWS EC2]()
-        * [AWS Lambda]()  
-        * [Challenge-01]() 
-        * [Challenge-02]()
-        * [Challenge-03]()   
+        * [Intro AWS](./CLASE-07/intro-aws/README.md)
+        * [Challenge-01](./CLASE-07/aws-challenge/challenge_01/README.md) 
+        * [Challenge-02](./CLASE-07/aws-challenge/challenge_02/README.md)
+        * [Challenge-03](./CLASE-07/aws-challenge/challenge_03/README.md)  
+        * Challenges **Autor:** Jorge Barreto | AWSx10 & AWS Community Builder | [LinkedIn](https://www.linkedin.com/in/jorgebarretoolivos/)
 
   1. Terraform
         * [Intro Terraform]()
@@ -126,8 +134,9 @@ En la III Edición, tu despliegue dejará de ser manual, repetitivo y propenso a
 
 
   1. Challenge Final
-        * [Challenge onfire v1 🔥🔥]()
-        * [Challenge onfire v2 🔥🔥]()
+        * [Challenge onfire v1 🔥](./DESAFIO-ONFIRE-2023/Challenge-onfire-v1-level100/Readme.md)
+        * [Challenge onfire v2 🔥🔥](./DESAFIO-ONFIRE-2023/Challenge-onfire-v2-level200/README.md)
+        * [Challenge onfire v3 🔥🔥🔥](./DESAFIO-ONFIRE-2023/Challenge-onfire-v3-level300/Readme.md)
 
   1. Recursos & Material de Referentes DevOps
         * [Proximamente]() 
