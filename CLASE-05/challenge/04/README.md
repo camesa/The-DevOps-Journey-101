@@ -1,6 +1,7 @@
-# LAB-03
+# LAB-04
 
-### Trabajando con Deployments
+## Actualización y desactualización de nuestra aplicación
+
 
 ##### 1. imagen donde se vea el acceso desde un navegador web a la version 1 de la aplicación aplicación (**imagen1.jpg**).
 
