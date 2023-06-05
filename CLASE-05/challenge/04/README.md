@@ -26,5 +26,5 @@
 
 #### 6. imagen donde se vea el acceso desde un navegador web a la version de la aplicación que queda después de hacer el rollout (**imagen6.jpg**).
 
-![web-v2](imagen5.png)
+![web-v2](imagen6.png)
 
