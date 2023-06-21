@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: c05-1
+  labels:
+    app: test-web
+spec:
+  containers:
+  - name: c05-1-test-web
+    image: roxsross12/k8s_test_web:latest
+    ports:
+    - containerPort: 80

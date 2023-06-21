@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-test-web-deployment
+  labels:
+    app: k8s-test-web
+  annotations:
+    kubernetes.io/change-cause: "Actualización a la versión 3 de la aplicación web"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8s-test-web
+  template:
+    metadata:
+      labels:
+        app: k8s-test-web
+    spec:
+      containers:
+        - name: web-container
+          image: roxsross12/k8s_test_web:v3
+          ports:
+            - containerPort: 80
+
